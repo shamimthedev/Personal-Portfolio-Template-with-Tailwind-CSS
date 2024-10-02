@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- FONT AWESOME CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GOOGLE FONTS START  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- GOOGLE FONTS END -->
+    <!-- SLICK SLIDER CDN  -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- TAILWIND CDN  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .slick-next:before,
+      .slick-prev:before {
+        border: 2px solid #9c9c9c;
+        color: #fff;
+        border-radius: 50%;
+        background-color: #9c9c9c;
+      }
+      .slick-prev {
+        left: -45px;
+      }
+      .slick-next {
+        right: -45px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER PART START -->
+    <section class="fixed top-0 left-0 w-full z-[999]">
+      <nav
+        class="max-w-6xl mx-auto py-6 px-24 flex items-center justify-between bg-navBackground text-paraBlack rounded-b-md"
+      >
+        <div>
+          <ul
+            class="flex items-center justify-center space-x-16 font-ibmPlex text-sm"
+          >
+            <li><a class="hover:text-white" href="#">Home</a></li>
+            <li><a class="hover:text-white" href="#">Case Studies</a></li>
+            <li><a class="hover:text-white" href="#">Testimonials</a></li>
+            <li><a class="hover:text-white" href="#">Recent Work</a></li>
+            <li><a class="hover:text-white" href="#">Get In Touch</a></li>
+          </ul>
+        </div>
+        <div class="flex items-center justify-center space-x-6">
+          <a class="hover:text-white" href="#"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a class="hover:text-white" href="#"
+            ><i class="fa-brands fa-behance"></i
+          ></a>
+          <a class="hover:text-white" href="#"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </div>
+      </nav>
+    </section>
+    <!-- HEADER PART END -->
+
+    <!-- BANNER PART START -->
+    <section class="bg-black pt-36">
+      <div
+        class="max-w-6xl mx-auto pl-[65px] pr-[125px] pb-14 flex items-center justify-between"
+      >
+        <div>
+          <h1 class="font-raleway font-extrabold text-white text-[44px]">
+            Tony Stark
+          </h1>
+          <p
+            class="max-w-[490px] text-paraBlack text-sm leading-[24px] py-5 font-ibmPlex"
+          >
+            Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="pt-2">
+            <a
+              class="bg-greenFull font-ibmPlex font-bold text-white px-16 py-6 inline-block rounded-md hover:bg-[#62BA1B]"
+              href="#"
+              >Let’s get started<i
+                class="fa-solid fa-angle-right text-white text-sm pl-2"
+              ></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <img src="images/banner-person.png" alt="banner-person" />
+        </div>
+      </div>
+      <div class="max-w-6xl mx-auto pl-[65px] pb-11">
+        <div class="pb-4">
+          <h4 class="text-sm font-ibmPlex text-white">Worked with</h4>
+        </div>
+        <div class="flex items-center space-x-6">
+          <img src="images/logo-clickup.png" alt="clickup logo" />
+          <img src="images/logo-dropbox.png" alt="clickup logo" />
+          <img src="images/logo-elastic.png" alt="clickup logo" />
+          <img src="images/logo-paycheck.png" alt="clickup logo" />
+          <img src="images/logo-stripe.png" alt="clickup logo" />
+        </div>
+      </div>
+    </section>
+    <!-- BANNER PART END -->
+
+    <!-- CASE STUDIES PART START -->
+    <section class="py-20">
+      <div class="text-center pb-14">
+        <h2 class="text-headingBlack font-extrabold text-3xl font-raleway">
+          Case Studies
+        </h2>
+        <p
+          class="text-sm font-ibmPlex text-paraBlack max-w-xl mx-auto pt-3 leading-6"
+        >
+          Solving user & business problems since last 15+ years. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="max-w-4xl mx-auto space-y-20">
+        <div class="flex items-center justify-between">
+          <div class="">
+            <p
+              class="bg-[#FFF6E9] text-[#FFA217] font-bold font-ibmPlex text-xs leading-6 inline-block rounded-full px-2.5"
+            >
+              Fintech
+            </p>
+            <h3
+              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
+            >
+              Work name here
+            </h3>
+            <p
+              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-10 leading-6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
+              eiusmod tempor incididunt ut labore et dolore magna.
+            </p>
+            <div class="">
+              <a
+                class="bg-[#FFA217] font-ibmPlex font-bold text-white px-11 py-3 inline-block text-sm rounded-md"
+                href="#"
+                >Let’s get started<i
+                  class="fa-solid fa-angle-right text-white text-sm pl-2"
+                ></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <img class="" src="images/case-study-1.png" alt="case-study" />
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <div>
+            <img class="" src="images/case-study-2.png" alt="case-study" />
+          </div>
+          <div class="">
+            <p
+              class="bg-[#D0E6FF] text-[#000AFF] font-bold font-ibmPlex text-xs leading-6 inline-block rounded-full px-2.5"
+            >
+              Fintech
+            </p>
+            <h3
+              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
+            >
+              Work name here
+            </h3>
+            <p
+              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-10 leading-6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
+              eiusmod tempor incididunt ut labore et dolore magna.
+            </p>
+            <div class="">
+              <a
+                class="bg-[#000AFF] font-ibmPlex font-bold text-white px-11 py-3 inline-block text-sm rounded-md"
+                href="#"
+                >Let’s get started<i
+                  class="fa-solid fa-angle-right text-white text-sm pl-2"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="">
+            <p
+              class="bg-[#E0FFF8] text-[#2AB090] font-bold font-ibmPlex text-xs leading-6 inline-block rounded-full px-2.5"
+            >
+              Fintech
+            </p>
+            <h3
+              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
+            >
+              Work name here
+            </h3>
+            <p
+              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-10 leading-6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
+              eiusmod tempor incididunt ut labore et dolore magna.
+            </p>
+            <div class="">
+              <a
+                class="bg-[#2AB090] font-ibmPlex font-bold text-white px-11 py-3 inline-block text-sm rounded-md"
+                href="#"
+                >Let’s get started<i
+                  class="fa-solid fa-angle-right text-white text-sm pl-2"
+                ></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <img class="" src="images/case-study-3.png" alt="case-study" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CASE STUDIES PART END -->
+
+    <!-- TESTIMONIALS PART START -->
+    <section class="bg-black py-20">
+      <div class="text-center pb-14">
+        <h2 class="text-white font-extrabold text-3xl font-raleway">
+          Testimonials
+        </h2>
+        <p
+          class="text-sm font-ibmPlex text-paraBlack max-w-xl mx-auto pt-3 leading-6"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="max-w-4xl mx-auto space-y-12">
+        <div class="flex items-center justify-between space-x-8">
+          <div class="border border-[#8080808c] rounded-md p-8">
+            <p
+              class="text-sm font-ibmPlex text-paraBlack max-w-xl pt-3 pb-8 leading-6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="flex items-center space-x-6">
+              <img src="images/Client photo 1.png" alt="" />
+              <p class="text-white">Client Name</p>
+            </div>
+          </div>
+          <div class="border border-[#8080808c] rounded-md p-8">
+            <p
+              class="text-sm font-ibmPlex text-paraBlack max-w-xl pt-3 pb-8 leading-6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="flex items-center space-x-6">
+              <img src="images/Client photo 2.png" alt="" />
+              <p class="text-white">Client Name</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between space-x-8">
+          <div class="border border-[#8080808c] rounded-md p-8">
+            <p
+              class="text-sm font-ibmPlex text-paraBlack max-w-xl pt-3 pb-8 leading-6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="flex items-center space-x-6">
+              <img src="images/Client photo 3.png" alt="" />
+              <p class="text-white">Client Name</p>
+            </div>
+          </div>
+          <div class="border border-[#8080808c] rounded-md p-8">
+            <p
+              class="text-sm font-ibmPlex text-paraBlack max-w-xl pt-3 pb-8 leading-6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="flex items-center space-x-6">
+              <img src="images/Client photo 4.png" alt="" />
+              <p class="text-white">Client Name</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- TESTIMONIALS PART END --
+
+    <!-- RECENT WORK PART START -->
+    <section class="py-20">
+      <div class="text-center pb-14">
+        <h2 class="text-headingBlack font-extrabold text-3xl font-raleway">
+          Recent Work
+        </h2>
+        <p
+          class="text-sm font-ibmPlex text-paraBlack max-w-xl mx-auto pt-3 leading-6"
+        >
+          Solving user & business problems since last 15+ years. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div
+        class="max-w-4xl mx-auto flex items-center justify-between responsive"
+      >
+        <div class="px-5">
+          <div>
+            <img
+              class=""
+              src="images/recent-work-slider-1.png"
+              alt="recent work"
+            />
+          </div>
+          <div class="">
+            <h3
+              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
+            >
+              Work name here
+            </h3>
+            <p
+              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-4 leading-6"
+            >
+              Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut
+              labore et dolore magna.
+            </p>
+            <div class="">
+              <a
+                class="bg-greenFull font-ibmPlex font-bold text-white px-5 py-2 inline-block text-sm rounded-sm"
+                href="#"
+                >Know more<i
+                  class="fa-solid fa-angle-right text-white text-xs pl-2"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="px-5">
+          <div>
+            <img
+              class=""
+              src="images/recent-work-slider-2.png"
+              alt="recent work"
+            />
+          </div>
+          <div class="">
+            <h3
+              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
+            >
+              Work name here
+            </h3>
+            <p
+              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-4 leading-6"
+            >
+              Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut
+              labore et dolore magna.
+            </p>
+            <div class="">
+              <a
+                class="bg-greenFull font-ibmPlex font-bold text-white px-5 py-2 inline-block text-sm rounded-sm"
+                href="#"
+                >Know more<i
+                  class="fa-solid fa-angle-right text-white text-xs pl-2"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="px-5">
+          <div>
+            <img
+              class=""
+              src="images/recent-work-slider-2.png"
+              alt="recent work"
+            />
+          </div>
+          <div class="">
+            <h3
+              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
+            >
+              Work name here
+            </h3>
+            <p
+              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-4 leading-6"
+            >
+              Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut
+              labore et dolore magna.
+            </p>
+            <div class="">
+              <a
+                class="bg-greenFull font-ibmPlex font-bold text-white px-5 py-2 inline-block text-sm rounded-sm"
+                href="#"
+                >Know more<i
+                  class="fa-solid fa-angle-right text-white text-xs pl-2"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="px-5">
+          <div>
+            <img
+              class=""
+              src="images/recent-work-slider-2.png"
+              alt="recent work"
+            />
+          </div>
+          <div class="">
+            <h3
+              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
+            >
+              Work name here
+            </h3>
+            <p
+              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-4 leading-6"
+            >
+              Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut
+              labore et dolore magna.
+            </p>
+            <div class="">
+              <a
+                class="bg-greenFull font-ibmPlex font-bold text-white px-5 py-2 inline-block text-sm rounded-sm"
+                href="#"
+                >Know more<i
+                  class="fa-solid fa-angle-right text-white text-xs pl-2"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- RECENT WORK PART END -->
+
+    <!-- GET IN TOUCH PART START -->
+    <section class="bg-black py-20">
+      <div class="text-center pb-10">
+        <h2 class="text-white font-extrabold text-3xl font-raleway">
+          Get In Touch
+        </h2>
+        <p
+          class="text-sm font-ibmPlex text-[#ffffff98] max-w-xl mx-auto pt-3 leading-6"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="max-w-[350px] mx-auto">
+        <form class="font-ibmPlex space-y-4" action="#">
+          <div class="">
+            <label
+              class="text-white font-semibold font-ibmPlex text-[12px]"
+              for="email"
+              >Email</label
+            >
+            <br />
+            <input
+              class="pl-2 py-2 w-[350px] text-[12px] placeholder-[#757575] font-ibmPlex rounded-sm"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Please enter your email"
+            />
+          </div>
+          <div>
+            <label
+              class="text-white font-semibold font-ibmPlex text-[12px]"
+              for="mobile"
+              >Mobile</label
+            >
+            <br />
+            <input
+              class="pl-2 py-2 w-[350px] text-[12px] placeholder-[#757575] font-ibmPlex rounded-sm"
+              type="text"
+              name="mobile"
+              id="mobile"
+              placeholder="Enter mobile"
+            />
+          </div>
+          <div>
+            <label
+              class="text-white font-semibold font-ibmPlex text-[12px]"
+              for="message"
+              >Message</label
+            >
+            <br />
+            <textarea
+              class="pl-2 w-[350px] h-28 text-[12px] placeholder-[#757575] font-ibmPlex rounded-[5px]"
+              name="message"
+              id="message"
+              placeholder="Enter your message"
+            >
+            </textarea>
+          </div>
+          <div class="text-center bg-greenFull rounded-[5px]">
+            <button
+              class="font-ibmPlex font-bold text-white py-3 text-sm"
+              type="submit"
+            >
+              Submit<i
+                class="fa-solid fa-angle-right text-white text-xs pl-2"
+              ></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- GET IN TOUCH PART END -->
+
+    <!-- FOOTER PART START -->
+    <section class="bg-[#1B1B1B] py-4">
+      <div>
+        <p class="font-ibmPlex text-[14px] text-paraBlack text-center">
+          Made with ❤️
+        </p>
+      </div>
+    </section>
+    <!-- FOOTER PART END -->
+
+    <!-- JS Here  -->
+    <script src="tailwind.config.js"></script>
+  </body>
+</html>
