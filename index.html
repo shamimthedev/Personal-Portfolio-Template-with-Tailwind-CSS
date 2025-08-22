@@ -1,566 +1,904 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio Template</title>
-    <!-- FONT AWESOME CDN  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- GOOGLE FONTS START  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- GOOGLE FONTS END -->
-    <!-- SLICK SLIDER CDN  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Shamim Hossain - Full Stack Developer</title>
+    
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- SLICK SLIDER CDN -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- TAILWIND CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    
+    <!-- TAILWIND CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navBackground': '#1B1B1B',
+                        'paraBlack': '#9C9C9C',
+                        'headingBlack': '#080808',
+                        'greenFull': '#3F8E00',
+                        'greenLight': '#62BA1B',
+                    },
+                    fontFamily: {
+                        'ibmPlex': ['IBM Plex Mono', 'monospace'],
+                        'raleway': ['Raleway', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    
     <style>
-      .slick-next:before,
-      .slick-prev:before {
-        border: 2px solid #9c9c9c;
-        color: #fff;
-        border-radius: 50%;
-        background-color: #9c9c9c;
-      }
-      .slick-prev {
-        left: -45px;
-      }
-      .slick-next {
-        right: -45px;
-      }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .slick-next:before, .slick-prev:before {
+            border: 2px solid #9c9c9c;
+            color: #fff;
+            border-radius: 50%;
+            background-color: #9c9c9c;
+        }
+        
+        .slick-prev { left: -45px; }
+        .slick-next { right: -45px; }
+        
+        .skill-bar {
+            background: linear-gradient(90deg, #3F8E00 0%, #62BA1B 100%);
+            height: 4px;
+            border-radius: 2px;
+            transition: width 2s ease-in-out;
+        }
+        
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .glass-effect {
+            background: rgba(27, 27, 27, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body class="bg-white">
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-full h-full bg-black z-[1000] lg:hidden">
+        <div class="flex justify-end p-6">
+            <button id="close-menu" class="text-white text-2xl">
+                <i class="fa-solid fa-times"></i>
+            </button>
+        </div>
+        <nav class="px-6">
+            <ul class="space-y-8 font-ibmPlex text-lg">
+                <li><a class="text-white hover:text-greenFull transition-colors" href="#home">Home</a></li>
+                <li><a class="text-white hover:text-greenFull transition-colors" href="#projects">Projects</a></li>
+                <li><a class="text-white hover:text-greenFull transition-colors" href="#skills">Skills</a></li>
+                <li><a class="text-white hover:text-greenFull transition-colors" href="#about">About</a></li>
+                <li><a class="text-white hover:text-greenFull transition-colors" href="#contact">Contact</a></li>
+            </ul>
+            <div class="flex space-x-6 mt-12">
+                <a class="text-white hover:text-greenFull transition-colors" href="https://linkedin.com/in/shamimthedev" target="_blank">
+                    <i class="fa-brands fa-linkedin-in text-xl"></i>
+                </a>
+                <a class="text-white hover:text-greenFull transition-colors" href="https://github.com/shamimthedev" target="_blank">
+                    <i class="fa-brands fa-github text-xl"></i>
+                </a>
+                <a class="text-white hover:text-greenFull transition-colors" href="https://x.com/shamimthedev" target="_blank">
+                    <i class="fa-brands fa-twitter text-xl"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
     <!-- HEADER PART START -->
     <section class="fixed top-0 left-0 w-full z-[999]">
-      <nav
-        class="max-w-6xl mx-auto py-6 px-24 flex items-center justify-between bg-navBackground text-paraBlack rounded-b-md"
-      >
-        <div>
-          <ul
-            class="flex items-center justify-center space-x-16 font-ibmPlex text-sm"
-          >
-            <li><a class="hover:text-white" href="#">Home</a></li>
-            <li><a class="hover:text-white" href="#">Case Studies</a></li>
-            <li><a class="hover:text-white" href="#">Testimonials</a></li>
-            <li><a class="hover:text-white" href="#">Recent Work</a></li>
-            <li><a class="hover:text-white" href="#">Get In Touch</a></li>
-          </ul>
-        </div>
-        <div class="flex items-center justify-center space-x-6">
-          <a class="hover:text-white" href="#"
-            ><i class="fa-brands fa-linkedin-in"></i
-          ></a>
-          <a class="hover:text-white" href="#"
-            ><i class="fa-brands fa-behance"></i
-          ></a>
-          <a class="hover:text-white" href="#"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
-        </div>
-      </nav>
+        <nav class="glass-effect">
+            <div class="max-w-6xl mx-auto py-4 px-6 lg:px-24 flex items-center justify-between">
+                <!-- Logo/Name -->
+                <div class="text-white font-raleway font-bold text-xl">
+                    Md. Shamim Hossain
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:block">
+                    <ul class="flex items-center justify-center space-x-8 font-ibmPlex text-sm">
+                        <li><a class="text-paraBlack hover:text-white transition-colors" href="#home">Home</a></li>
+                        <li><a class="text-paraBlack hover:text-white transition-colors" href="#projects">Projects</a></li>
+                        <li><a class="text-paraBlack hover:text-white transition-colors" href="#skills">Skills</a></li>
+                        <li><a class="text-paraBlack hover:text-white transition-colors" href="#about">About</a></li>
+                        <li><a class="text-paraBlack hover:text-white transition-colors" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Links & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div class="hidden lg:flex items-center space-x-6">
+                        <a class="text-paraBlack hover:text-white transition-colors" href="https://www.linkedin.com/in/shamimthedev" target="_blank">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-paraBlack hover:text-white transition-colors" href="https://github.com/shamimthedev" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a class="text-paraBlack hover:text-white transition-colors" href="https://x.com/shamimthedev" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-btn" class="lg:hidden text-white text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
     </section>
     <!-- HEADER PART END -->
 
-    <!-- BANNER PART START -->
-    <section class="bg-black pt-36">
-      <div
-        class="max-w-6xl mx-auto px-24 pb-14 flex items-center justify-between"
-      >
-        <div>
-          <h1 class="font-raleway font-extrabold text-white text-[44px]">
-            Tony Stark
-          </h1>
-          <p
-            class="max-w-[490px] text-paraBlack text-sm leading-[24px] py-5 font-ibmPlex"
-          >
-            Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <div class="pt-2">
-            <a
-              class="bg-greenFull font-ibmPlex font-bold text-white px-16 py-6 inline-block rounded-md hover:bg-[#62BA1B]"
-              href="#"
-              >Let’s get started<i
-                class="fa-solid fa-angle-right text-white text-sm pl-2"
-              ></i
-            ></a>
-          </div>
+    <!-- HERO SECTION START -->
+    <section id="home" class="bg-black pt-24 lg:pt-36">
+        <div class="max-w-6xl mx-auto px-6 lg:px-24 pb-14">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in">
+                    <div class="mb-4">
+                        <span class="text-greenFull font-ibmPlex text-sm font-semibold">Hello, I'm Md. Shamim Hossain</span>
+                    </div>
+                    <h1 class="font-raleway font-extrabold text-white text-3xl lg:text-[44px] leading-tight">
+                        Full Stack Developer
+                    </h1>
+                    <p class="text-paraBlack text-sm lg:text-base leading-relaxed py-6 font-ibmPlex max-w-lg">
+                        I create beautiful, responsive web applications using modern technologies. 
+                        Passionate about clean code, user experience, and solving complex problems.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="#projects" class="bg-greenFull font-ibmPlex font-bold text-white px-8 py-4 rounded-md hover:bg-greenLight transition-colors inline-flex items-center justify-center">
+                            View My Work
+                            <i class="fa-solid fa-arrow-down text-white text-sm ml-2"></i>
+                        </a>
+                        <a href="#contact" class="border-2 border-greenFull font-ibmPlex font-bold text-greenFull px-8 py-4 rounded-md hover:bg-greenFull hover:text-white transition-all inline-flex items-center justify-center">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="animate-fade-in flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <!-- Profile Image Placeholder -->
+                        <div class="w-80 h-80 bg-gradient-to-r from-greenFull to-greenLight rounded-full flex items-center justify-center animate-float">
+                            <i class="fa-solid fa-user text-white text-8xl"></i>
+                        </div>
+                        <!-- Floating Elements -->
+                        <div class="absolute -top-4 -left-4 w-12 h-12 bg-greenFull rounded-lg animate-float" style="animation-delay: 0.5s;"></div>
+                        <div class="absolute -bottom-4 -right-4 w-8 h-8 bg-greenLight rounded-full animate-float" style="animation-delay: 1s;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-          <img src="images/banner-person.png" alt="banner-person" />
+        
+        <!-- Tech Stack -->
+        <div class="max-w-6xl mx-auto px-6 lg:px-24 pb-16">
+            <div class="mb-6">
+                <h4 class="text-sm font-ibmPlex text-paraBlack">Technologies I work with</h4>
+            </div>
+            <div class="grid grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-60">
+                <!-- Tech logos as text for now - replace with actual logos -->
+                <div class="text-center">
+                    <i class="fa-brands fa-react text-4xl text-white mb-2"></i>
+                    <p class="text-paraBlack text-xs font-ibmPlex">React</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-brands fa-node-js text-4xl text-white mb-2"></i>
+                    <p class="text-paraBlack text-xs font-ibmPlex">Node.js</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-brands fa-js-square text-4xl text-white mb-2"></i>
+                    <p class="text-paraBlack text-xs font-ibmPlex">JavaScript</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-brands fa-python text-4xl text-white mb-2"></i>
+                    <p class="text-paraBlack text-xs font-ibmPlex">Python</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-brands fa-git-alt text-4xl text-white mb-2"></i>
+                    <p class="text-paraBlack text-xs font-ibmPlex">Git</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-brands fa-docker text-4xl text-white mb-2"></i>
+                    <p class="text-paraBlack text-xs font-ibmPlex">Docker</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="max-w-6xl mx-auto px-24 pb-11">
-        <div class="pb-4">
-          <h4 class="text-sm font-ibmPlex text-white">Worked with</h4>
-        </div>
-        <div class="flex items-center space-x-6">
-          <img src="images/logo-clickup.png" alt="clickup logo" />
-          <img src="images/logo-dropbox.png" alt="clickup logo" />
-          <img src="images/logo-elastic.png" alt="clickup logo" />
-          <img src="images/logo-paycheck.png" alt="clickup logo" />
-          <img src="images/logo-stripe.png" alt="clickup logo" />
-        </div>
-      </div>
     </section>
-    <!-- BANNER PART END -->
+    <!-- HERO SECTION END -->
 
-    <!-- CASE STUDIES PART START -->
-    <section class="py-20">
-      <div class="text-center pb-14">
-        <h2 class="text-headingBlack font-extrabold text-3xl font-raleway">
-          Case Studies
-        </h2>
-        <p
-          class="text-sm font-ibmPlex text-paraBlack max-w-xl mx-auto pt-3 leading-6"
-        >
-          Solving user & business problems since last 15+ years. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-      <div class="max-w-4xl mx-auto space-y-20">
-        <div class="flex items-center justify-between">
-          <div class="">
-            <p
-              class="bg-[#FFF6E9] text-[#FFA217] font-bold font-ibmPlex text-xs leading-6 inline-block rounded-full px-2.5"
-            >
-              Fintech
-            </p>
-            <h3
-              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
-            >
-              Work name here
-            </h3>
-            <p
-              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-10 leading-6"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
-            </p>
-            <div class="">
-              <a
-                class="bg-[#FFA217] font-ibmPlex font-bold text-white px-11 py-3 inline-block text-sm rounded-md"
-                href="#"
-                >Let’s get started<i
-                  class="fa-solid fa-angle-right text-white text-sm pl-2"
-                ></i
-              ></a>
+    <!-- SKILLS SECTION START -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 lg:px-24">
+            <div class="text-center mb-16">
+                <h2 class="text-headingBlack font-extrabold text-3xl font-raleway mb-4">
+                    Skills & Expertise
+                </h2>
+                <p class="text-paraBlack font-ibmPlex max-w-2xl mx-auto leading-relaxed">
+                    Here are the technologies and tools I'm proficient in, with years of experience building real-world applications.
+                </p>
             </div>
-          </div>
-          <div>
-            <img class="" src="images/case-study-1.png" alt="case-study" />
-          </div>
-        </div>
-        <div class="flex items-center justify-between">
-          <div>
-            <img class="" src="images/case-study-2.png" alt="case-study" />
-          </div>
-          <div class="">
-            <p
-              class="bg-[#D0E6FF] text-[#000AFF] font-bold font-ibmPlex text-xs leading-6 inline-block rounded-full px-2.5"
-            >
-              Fintech
-            </p>
-            <h3
-              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
-            >
-              Work name here
-            </h3>
-            <p
-              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-10 leading-6"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
-            </p>
-            <div class="">
-              <a
-                class="bg-[#000AFF] font-ibmPlex font-bold text-white px-11 py-3 inline-block text-sm rounded-md"
-                href="#"
-                >Let’s get started<i
-                  class="fa-solid fa-angle-right text-white text-sm pl-2"
-                ></i
-              ></a>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-raleway font-bold text-headingBlack mb-8">Technical Skills</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-ibmPlex text-sm font-semibold">JavaScript</span>
+                                <span class="font-ibmPlex text-sm text-paraBlack">90%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-ibmPlex text-sm font-semibold">React.js</span>
+                                <span class="font-ibmPlex text-sm text-paraBlack">85%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-ibmPlex text-sm font-semibold">Node.js</span>
+                                <span class="font-ibmPlex text-sm text-paraBlack">80%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-ibmPlex text-sm font-semibold">Python</span>
+                                <span class="font-ibmPlex text-sm text-paraBlack">75%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-raleway font-bold text-headingBlack mb-8">What I Do</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-greenFull p-3 rounded-lg">
+                                <i class="fa-solid fa-code text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-raleway font-semibold text-headingBlack mb-2">Frontend Development</h4>
+                                <p class="text-paraBlack text-sm font-ibmPlex leading-relaxed">
+                                    Creating responsive, interactive user interfaces with modern frameworks and libraries.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-greenFull p-3 rounded-lg">
+                                <i class="fa-solid fa-server text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-raleway font-semibold text-headingBlack mb-2">Backend Development</h4>
+                                <p class="text-paraBlack text-sm font-ibmPlex leading-relaxed">
+                                    Building robust APIs, databases, and server-side applications with scalable architecture.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-greenFull p-3 rounded-lg">
+                                <i class="fa-solid fa-mobile-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-raleway font-semibold text-headingBlack mb-2">Mobile-First Design</h4>
+                                <p class="text-paraBlack text-sm font-ibmPlex leading-relaxed">
+                                    Designing applications that work seamlessly across all devices and screen sizes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="flex items-center justify-between">
-          <div class="">
-            <p
-              class="bg-[#E0FFF8] text-[#2AB090] font-bold font-ibmPlex text-xs leading-6 inline-block rounded-full px-2.5"
-            >
-              Fintech
-            </p>
-            <h3
-              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
-            >
-              Work name here
-            </h3>
-            <p
-              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-10 leading-6"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
-            </p>
-            <div class="">
-              <a
-                class="bg-[#2AB090] font-ibmPlex font-bold text-white px-11 py-3 inline-block text-sm rounded-md"
-                href="#"
-                >Let’s get started<i
-                  class="fa-solid fa-angle-right text-white text-sm pl-2"
-                ></i
-              ></a>
-            </div>
-          </div>
-          <div>
-            <img class="" src="images/case-study-3.png" alt="case-study" />
-          </div>
-        </div>
-      </div>
     </section>
-    <!-- CASE STUDIES PART END -->
+    <!-- SKILLS SECTION END -->
 
-    <!-- TESTIMONIALS PART START -->
-    <section class="bg-black py-20">
-      <div class="text-center pb-14">
-        <h2 class="text-white font-extrabold text-3xl font-raleway">
-          Testimonials
-        </h2>
-        <p
-          class="text-sm font-ibmPlex text-paraBlack max-w-xl mx-auto pt-3 leading-6"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-      <div class="max-w-4xl mx-auto space-y-12">
-        <div class="flex items-center justify-between space-x-8">
-          <div class="border border-[#8080808c] rounded-md p-8">
-            <p
-              class="text-sm font-ibmPlex text-paraBlack max-w-xl pt-3 pb-8 leading-6"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div class="flex items-center space-x-6">
-              <img src="images/Client photo 1.png" alt="" />
-              <p class="text-white">Client Name</p>
+    <!-- PROJECTS SECTION START -->
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl mx-auto px-6 lg:px-24">
+            <div class="text-center mb-16">
+                <h2 class="text-headingBlack font-extrabold text-3xl font-raleway mb-4">
+                    Featured Projects
+                </h2>
+                <p class="text-paraBlack font-ibmPlex max-w-2xl mx-auto leading-relaxed">
+                    Here are some of the projects I've worked on. Each one represents a unique challenge and solution.
+                </p>
             </div>
-          </div>
-          <div class="border border-[#8080808c] rounded-md p-8">
-            <p
-              class="text-sm font-ibmPlex text-paraBlack max-w-xl pt-3 pb-8 leading-6"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div class="flex items-center space-x-6">
-              <img src="images/Client photo 2.png" alt="" />
-              <p class="text-white">Client Name</p>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+                        <i class="fa-solid fa-laptop-code text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
+                                Web App
+                            </span>
+                            <div class="flex space-x-2">
+                                <a href="#" class="text-paraBlack hover:text-headingBlack">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="#" class="text-paraBlack hover:text-headingBlack">
+                                    <i class="fa-solid fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-raleway font-bold text-headingBlack mb-3">
+                            E-Commerce Platform
+                        </h3>
+                        <p class="text-paraBlack text-sm font-ibmPlex leading-relaxed mb-4">
+                            Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">React</span>
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">Node.js</span>
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center">
+                        <i class="fa-solid fa-chart-line text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-xs font-semibold">
+                                Dashboard
+                            </span>
+                            <div class="flex space-x-2">
+                                <a href="#" class="text-paraBlack hover:text-headingBlack">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="#" class="text-paraBlack hover:text-headingBlack">
+                                    <i class="fa-solid fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-raleway font-bold text-headingBlack mb-3">
+                            Analytics Dashboard
+                        </h3>
+                        <p class="text-paraBlack text-sm font-ibmPlex leading-relaxed mb-4">
+                            Real-time analytics dashboard with interactive charts and data visualization. Built with React and D3.js for dynamic data presentation.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">React</span>
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">D3.js</span>
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center">
+                        <i class="fa-solid fa-mobile-alt text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-xs font-semibold">
+                                Mobile App
+                            </span>
+                            <div class="flex space-x-2">
+                                <a href="#" class="text-paraBlack hover:text-headingBlack">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="#" class="text-paraBlack hover:text-headingBlack">
+                                    <i class="fa-solid fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-raleway font-bold text-headingBlack mb-3">
+                            Task Management App
+                        </h3>
+                        <p class="text-paraBlack text-sm font-ibmPlex leading-relaxed mb-4">
+                            Cross-platform mobile application for task management with offline support and real-time synchronization across devices.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">React Native</span>
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">Firebase</span>
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">Redux</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://github.com" target="_blank" class="bg-headingBlack font-ibmPlex font-bold text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors inline-flex items-center">
+                    View All Projects
+                    <i class="fa-brands fa-github text-white text-sm ml-2"></i>
+                </a>
+            </div>
         </div>
-        <div class="flex items-center justify-between space-x-8">
-          <div class="border border-[#8080808c] rounded-md p-8">
-            <p
-              class="text-sm font-ibmPlex text-paraBlack max-w-xl pt-3 pb-8 leading-6"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div class="flex items-center space-x-6">
-              <img src="images/Client photo 3.png" alt="" />
-              <p class="text-white">Client Name</p>
-            </div>
-          </div>
-          <div class="border border-[#8080808c] rounded-md p-8">
-            <p
-              class="text-sm font-ibmPlex text-paraBlack max-w-xl pt-3 pb-8 leading-6"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div class="flex items-center space-x-6">
-              <img src="images/Client photo 4.png" alt="" />
-              <p class="text-white">Client Name</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
-    <!-- TESTIMONIALS PART END --
+    <!-- PROJECTS SECTION END -->
 
-    <!-- RECENT WORK PART START -->
-    <section class="py-20">
-      <div class="text-center pb-14">
-        <h2 class="text-headingBlack font-extrabold text-3xl font-raleway">
-          Recent Work
-        </h2>
-        <p
-          class="text-sm font-ibmPlex text-paraBlack max-w-xl mx-auto pt-3 leading-6"
-        >
-          Solving user & business problems since last 15+ years. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-      <div
-        class="max-w-4xl mx-auto flex items-center justify-between responsive"
-      >
-        <div class="px-5">
-          <div>
-            <img
-              class=""
-              src="images/recent-work-slider-1.png"
-              alt="recent work"
-            />
-          </div>
-          <div class="">
-            <h3
-              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
-            >
-              Work name here
-            </h3>
-            <p
-              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-4 leading-6"
-            >
-              Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut
-              labore et dolore magna.
-            </p>
-            <div class="">
-              <a
-                class="bg-greenFull font-ibmPlex font-bold text-white px-5 py-2 inline-block text-sm rounded-sm"
-                href="#"
-                >Know more<i
-                  class="fa-solid fa-angle-right text-white text-xs pl-2"
-                ></i
-              ></a>
+    <!-- ABOUT SECTION START -->
+    <section id="about" class="bg-black py-20">
+        <div class="max-w-6xl mx-auto px-6 lg:px-24">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-white font-extrabold text-3xl font-raleway mb-6">
+                        About Me
+                    </h2>
+                    <p class="text-paraBlack font-ibmPlex leading-relaxed mb-6">
+                        I'm a passionate full-stack developer with over 3 years of experience creating digital solutions 
+                        that make a difference. I love turning complex problems into simple, beautiful designs.
+                    </p>
+                    <p class="text-paraBlack font-ibmPlex leading-relaxed mb-8">
+                        When I'm not coding, you can find me exploring new technologies, contributing to open-source 
+                        projects, or sharing knowledge with the developer community.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-3xl font-raleway font-bold text-greenFull mb-2">50+</h3>
+                            <p class="text-paraBlack font-ibmPlex text-sm">Projects Completed</p>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-raleway font-bold text-greenFull mb-2">3+</h3>
+                            <p class="text-paraBlack font-ibmPlex text-sm">Years Experience</p>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-raleway font-bold text-greenFull mb-2">20+</h3>
+                            <p class="text-paraBlack font-ibmPlex text-sm">Happy Clients</p>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-raleway font-bold text-greenFull mb-2">10+</h3>
+                            <p class="text-paraBlack font-ibmPlex text-sm">Technologies</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-96 bg-gradient-to-b from-greenFull to-greenLight rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-user-tie text-white text-6xl"></i>
+                        </div>
+                        <!-- Decorative elements -->
+                        <div class="absolute -top-4 -right-4 w-16 h-16 bg-white rounded-full opacity-20"></div>
+                        <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-white rounded-lg opacity-30"></div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="px-5">
-          <div>
-            <img
-              class=""
-              src="images/recent-work-slider-2.png"
-              alt="recent work"
-            />
-          </div>
-          <div class="">
-            <h3
-              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
-            >
-              Work name here
-            </h3>
-            <p
-              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-4 leading-6"
-            >
-              Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut
-              labore et dolore magna.
-            </p>
-            <div class="">
-              <a
-                class="bg-greenFull font-ibmPlex font-bold text-white px-5 py-2 inline-block text-sm rounded-sm"
-                href="#"
-                >Know more<i
-                  class="fa-solid fa-angle-right text-white text-xs pl-2"
-                ></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="px-5">
-          <div>
-            <img
-              class=""
-              src="images/recent-work-slider-2.png"
-              alt="recent work"
-            />
-          </div>
-          <div class="">
-            <h3
-              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
-            >
-              Work name here
-            </h3>
-            <p
-              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-4 leading-6"
-            >
-              Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut
-              labore et dolore magna.
-            </p>
-            <div class="">
-              <a
-                class="bg-greenFull font-ibmPlex font-bold text-white px-5 py-2 inline-block text-sm rounded-sm"
-                href="#"
-                >Know more<i
-                  class="fa-solid fa-angle-right text-white text-xs pl-2"
-                ></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="px-5">
-          <div>
-            <img
-              class=""
-              src="images/recent-work-slider-2.png"
-              alt="recent work"
-            />
-          </div>
-          <div class="">
-            <h3
-              class="text-headingBlack font-extrabold text-2xl font-raleway pt-5"
-            >
-              Work name here
-            </h3>
-            <p
-              class="max-w-sm text-sm font-ibmPlex text-paraBlack pt-3 pb-4 leading-6"
-            >
-              Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut
-              labore et dolore magna.
-            </p>
-            <div class="">
-              <a
-                class="bg-greenFull font-ibmPlex font-bold text-white px-5 py-2 inline-block text-sm rounded-sm"
-                href="#"
-                >Know more<i
-                  class="fa-solid fa-angle-right text-white text-xs pl-2"
-                ></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
-    <!-- RECENT WORK PART END -->
+    <!-- ABOUT SECTION END -->
 
-    <!-- GET IN TOUCH PART START -->
-    <section class="bg-black py-20">
-      <div class="text-center pb-10">
-        <h2 class="text-white font-extrabold text-3xl font-raleway">
-          Get In Touch
-        </h2>
-        <p
-          class="text-sm font-ibmPlex text-[#ffffff98] max-w-xl mx-auto pt-3 leading-6"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-      <div class="max-w-[350px] mx-auto">
-        <form class="font-ibmPlex space-y-4" action="#">
-          <div class="">
-            <label
-              class="text-white font-semibold font-ibmPlex text-[12px]"
-              for="email"
-              >Email</label
-            >
-            <br />
-            <input
-              class="pl-2 py-2 w-[350px] text-[12px] placeholder-[#757575] font-ibmPlex rounded-sm"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Please enter your email"
-            />
-          </div>
-          <div>
-            <label
-              class="text-white font-semibold font-ibmPlex text-[12px]"
-              for="mobile"
-              >Mobile</label
-            >
-            <br />
-            <input
-              class="pl-2 py-2 w-[350px] text-[12px] placeholder-[#757575] font-ibmPlex rounded-sm"
-              type="text"
-              name="mobile"
-              id="mobile"
-              placeholder="Enter mobile"
-            />
-          </div>
-          <div>
-            <label
-              class="text-white font-semibold font-ibmPlex text-[12px]"
-              for="message"
-              >Message</label
-            >
-            <br />
-            <textarea
-              class="pl-2 w-[350px] h-28 text-[12px] placeholder-[#757575] font-ibmPlex rounded-[5px]"
-              name="message"
-              id="message"
-              placeholder="Enter your message"
-            >
-            </textarea>
-          </div>
-          <div class="text-center bg-greenFull rounded-[5px]">
-            <button
-              class="font-ibmPlex font-bold text-white py-3 text-sm"
-              type="submit"
-            >
-              Submit<i
-                class="fa-solid fa-angle-right text-white text-xs pl-2"
-              ></i>
-            </button>
-          </div>
-        </form>
-      </div>
+    <!-- TESTIMONIALS SECTION START -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 lg:px-24">
+            <div class="text-center mb-16">
+                <h2 class="text-headingBlack font-extrabold text-3xl font-raleway mb-4">
+                    What People Say
+                </h2>
+                <p class="text-paraBlack font-ibmPlex max-w-2xl mx-auto leading-relaxed">
+                    Don't just take my word for it. Here's what clients and colleagues have said about working with me.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-paraBlack font-ibmPlex leading-relaxed mb-6 italic">
+                        "Exceptional work quality and attention to detail. The project was delivered on time and exceeded our expectations. Highly recommended for any web development needs."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <p class="font-raleway font-semibold text-headingBlack">Sarah Johnson</p>
+                            <p class="text-paraBlack text-sm font-ibmPlex">Product Manager, TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-paraBlack font-ibmPlex leading-relaxed mb-6 italic">
+                        "Professional, reliable, and incredibly skilled. The application they built for us has been running smoothly for over a year with minimal maintenance required."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <p class="font-raleway font-semibold text-headingBlack">Michael Chen</p>
+                            <p class="text-paraBlack text-sm font-ibmPlex">CTO, StartupXYZ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- GET IN TOUCH PART END -->
+    <!-- TESTIMONIALS SECTION END -->
 
-    <!-- FOOTER PART START -->
-    <section class="bg-[#1B1B1B] py-4">
-      <div>
-        <p class="font-ibmPlex text-[14px] text-paraBlack text-center">
-          Made with ❤️
-        </p>
-      </div>
+    <!-- CONTACT SECTION START -->
+    <section id="contact" class="bg-black py-20">
+        <div class="max-w-6xl mx-auto px-6 lg:px-24">
+            <div class="text-center mb-16">
+                <h2 class="text-white font-extrabold text-3xl font-raleway mb-4">
+                    Let's Work Together
+                </h2>
+                <p class="text-paraBlack font-ibmPlex max-w-2xl mx-auto leading-relaxed">
+                    Have a project in mind? Let's discuss how we can bring your ideas to life. 
+                    I'm always excited to work on new challenges.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-white font-raleway font-bold text-xl mb-8">Get In Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-greenFull rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-white font-ibmPlex font-semibold">Email</p>
+                                <p class="text-paraBlack font-ibmPlex">shamimthedev@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-greenFull rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-white font-ibmPlex font-semibold">Phone</p>
+                                <p class="text-paraBlack font-ibmPlex">+880 1581 101823</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-greenFull rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-white font-ibmPlex font-semibold">Location</p>
+                                <p class="text-paraBlack font-ibmPlex">Dhaka, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h4 class="text-white font-ibmPlex font-semibold mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/shamimthedev" target="_blank" 
+                               class="w-12 h-12 bg-gray-800 hover:bg-greenFull rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fa-brands fa-linkedin-in text-white"></i>
+                            </a>
+                            <a href="https://github.com/shamimthedev" target="_blank" 
+                               class="w-12 h-12 bg-gray-800 hover:bg-greenFull rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fa-brands fa-github text-white"></i>
+                            </a>
+                            <a href="https://x.com/shamimthedev" target="_blank" 
+                               class="w-12 h-12 bg-gray-800 hover:bg-greenFull rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fa-brands fa-twitter text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div>
+                    <div class="bg-gray-900 rounded-lg p-8">
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-white font-ibmPlex font-semibold text-sm mb-2" for="name">
+                                    Name *
+                                </label>
+                                <input 
+                                    class="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:border-greenFull focus:outline-none transition-colors font-ibmPlex"
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    placeholder="Your full name"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label class="block text-white font-ibmPlex font-semibold text-sm mb-2" for="email">
+                                    Email *
+                                </label>
+                                <input 
+                                    class="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:border-greenFull focus:outline-none transition-colors font-ibmPlex"
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="your.email@example.com"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label class="block text-white font-ibmPlex font-semibold text-sm mb-2" for="subject">
+                                    Subject
+                                </label>
+                                <input 
+                                    class="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:border-greenFull focus:outline-none transition-colors font-ibmPlex"
+                                    type="text" 
+                                    id="subject" 
+                                    name="subject" 
+                                    placeholder="Project discussion"
+                                />
+                            </div>
+                            <div>
+                                <label class="block text-white font-ibmPlex font-semibold text-sm mb-2" for="message">
+                                    Message *
+                                </label>
+                                <textarea 
+                                    class="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:border-greenFull focus:outline-none transition-colors font-ibmPlex resize-none"
+                                    id="message" 
+                                    name="message" 
+                                    rows="5" 
+                                    placeholder="Tell me about your project..."
+                                    required
+                                ></textarea>
+                            </div>
+                            <button 
+                                type="button" 
+                                onclick="handleFormSubmit()"
+                                class="w-full bg-greenFull hover:bg-greenLight text-white font-ibmPlex font-bold py-4 px-6 rounded-lg transition-colors flex items-center justify-center">
+                                Send Message
+                                <i class="fa-solid fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- FOOTER PART END -->
+    <!-- CONTACT SECTION END -->
 
-    <!-- JS Here  -->
-    <script src="tailwind.config.js"></script>
-  </body>
+    <!-- FOOTER SECTION START -->
+    <section class="bg-gray-900 py-8">
+        <div class="max-w-6xl mx-auto px-6 lg:px-24">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="mb-4 lg:mb-0">
+                    <p class="font-ibmPlex text-paraBlack text-sm">
+                        © 2025 Md. Shamim Hossain. All rights reserved.
+                    </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-paraBlack hover:text-white transition-colors font-ibmPlex text-sm">
+                        Privacy Policy
+                    </a>
+                    <a href="#" class="text-paraBlack hover:text-white transition-colors font-ibmPlex text-sm">
+                        Terms of Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER SECTION END -->
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuBtn = document.getElementById('close-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Close mobile menu when clicking on links
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Skill bar animation on scroll
+        const skillBars = document.querySelectorAll('.skill-bar');
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const width = entry.target.style.width;
+                    entry.target.style.width = '0%';
+                    setTimeout(() => {
+                        entry.target.style.width = width;
+                    }, 300);
+                }
+            });
+        }, observerOptions);
+
+        skillBars.forEach(bar => {
+            skillObserver.observe(bar);
+        });
+
+        // Form submission handler
+        function handleFormSubmit() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Here you would typically send the form data to your server
+            // For now, we'll just show a success message
+            alert('Thank you for your message! I\'ll get back to you soon.');
+            
+            // Reset form
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('subject').value = '';
+            document.getElementById('message').value = '';
+        }
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('backdrop-blur-md');
+            } else {
+                nav.classList.remove('backdrop-blur-md');
+            }
+        });
+
+        // Initialize slick slider if present
+        $(document).ready(function(){
+            if ($('.project-slider').length) {
+                $('.project-slider').slick({
+                    dots: true,
+                    infinite: true,
+                    autoplay: true,
+                    arrows: true,
+                    speed: 500,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });
+            }
+        });
+
+        // Typing animation for hero section
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing animation when page loads
+        window.addEventListener('load', () => {
+            const heroTitle = document.querySelector('#home h1');
+            if (heroTitle) {
+                const originalText = heroTitle.textContent;
+                typeWriter(heroTitle, originalText, 50);
+            }
+        });
+    </script>
+</body>
 </html>
